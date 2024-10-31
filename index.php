@@ -5,10 +5,11 @@ include('views/header.php');
 
 <link rel="stylesheet" href="estilos.css">
 
-<h2>Bienvenido a TechServer Solutions</h2>
+<h2 class= Saludo> Bienvenido(a)</h2>
 
 <div id="carouselExample" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
+        <h2> Productos más vendidos</h2>
         <div class="carousel-item active">
             <img src="images/Electro1.jpg" class="d-block w-100" alt="Electrodoméstico 1">
         </div>
