@@ -1,61 +1,175 @@
-/* Estilos Generales */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
-    color: #333;
-    margin: 0;
-    padding: 0;
+    font-family: 'Raleway', sans-serif;  
+    background-color: #f5f5f5;          
+    color: #333;                        
+    margin: 0;                         
+    padding: 0;                       
+    height: 100vh;                     
+    width: 100vw;                      
+    overflow-x: hidden;                
 }
 
 header {
-    background-color: #4CAF50;
-    padding: 15px;
+    background: linear-gradient(to right, rgb(59, 97, 178), rgb(12, 31, 79));
+    height: 90px;
     text-align: center;
-    color: white;
+    color: rgb(226, 239, 255);
 }
 
 header h1 {
     margin: 0;
+    display: flex;
+    margin-left: 125px;
+    font-family: 'Share Tech Mono', monospace;
+    margin-top: -60px;
+    font-size: 30px;
+}
+
+header img {
+    display: flex;
+    width: 90px;
+    height: 90px;
+    padding: 5px;
+}
+.logo-icon{
+    display: flex;
+    width: 90px;
+    height: 90px;
+    border-radius: 100%;
+    margin-left: 20px;
+    padding: 5px;    
+}
+.carrito-icon{
+    width: 30px;                
+    height: 30px;               
+    border-radius: 50%;         
+    object-fit: cover;         
+    margin-left: 1195px;         
+    cursor: pointer;            
+    transition: background-color 0.3s; 
+    margin-top: -52px;
+    
+}
+.perfil-icon{
+    width: 30px;                
+    height: 30px;               
+    border-radius: 50%;         
+    object-fit: cover; 
+    margin-left: 1225px;        
+    cursor: pointer;            
+    transition: background-color 0.3s;
+    margin-top: -30px;
+}
+
+.carrito-icon:hover, .perfil-icon:hover {
+    background-color: rgb(131, 156, 202); 
+}
+nav {
+    display: flex;
+    justify-content: center;  
+    align-items: center;      
+    width: 100%;
+    margin-left: 338px;
+    margin-top: 5px;
 }
 
 nav a {
-    margin: 0 15px;
+    padding: 8px 16px; 
     text-decoration: none;
-    color: white;
+    color: rgb(73, 117, 199);
+    font-size: 12px;
     font-weight: bold;
+    font-family: 'Lucida Sans Regular', sans-serif;
+    background-color: #e0e0e0; 
+    border-radius: 20px; 
+    transition: background-color 0.3s, color 0.3s; 
 }
 
 nav a:hover {
-    text-decoration: underline;
+    background-color: rgb(131, 156, 202); 
+    color: #ffffff; 
 }
-
-/* Carrusel */
+/*Banner*/
+.Saludo {
+    margin-left: 15px;
+    font-size: 24px;
+    font-weight: bold;
+    font-family: 'Raleway', sans-serif;
+    margin-left: 60px;
+    margin-top: 20px;
+}
 .carousel {
-    width: 30%;
+    width: 50%;               
     max-height: 900px;
     overflow: hidden;
     position: relative;
-    margin: 20px auto; /* Centra el carrusel horizontalmente */
+    margin: 20px auto;        
+    border-radius: 10px;    
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); 
+    background-color: #ffffff; 
+    transition: box-shadow 0.3s ease;
+}
+
+.carousel:hover {
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.2); 
+}
+.carousel h2{
+    font-size: 20px;
+    font-family: 'Raleway', sans-serif;
+    margin-bottom: 20px;
+    margin-left: 12px;
+    margin-top: 15px;
 }
 
 .carousel-item {
-    display: none;
-    width: 100%;
+    display: none;             
+    width: 100%;              
     position: absolute;
+    text-align: center;       
+    opacity: 0;              
+    transition: opacity 0.5s ease;
 }
 
 .carousel-item.active {
-    display: block;
-    text-align: center; /* Centra el contenido dentro del contenedor */
+    display: block;           
+    opacity: 1;              
 }
 
 .carousel-item img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    max-height: 500px;
-    display: block;
-    margin: 0 auto; /* Centra la imagen dentro del carrusel */
+    max-width: 170px;         
+    height: 170px;            
+    object-fit: cover;      
+    max-height: 500px;      
+    margin: 0 auto;        
+    border-radius: 10px;   
+}
+
+.carousel-control {
+    position: absolute;    
+    top: 50%;                
+    transform: translateY(-50%); 
+    background-color: rgba(255, 255, 255, 0.7); 
+    border: none;
+    border-radius: 50%;      
+    width: 40px;            
+    height: 40px;             
+    display: flex;
+    justify-content: center;  
+    align-items: center;       
+    cursor: pointer;           
+    transition: background-color 0.3s ease; 
+}
+
+.carousel-control:hover {
+    background-color: rgba(255, 255, 255, 1); 
+}
+
+.carousel-control.left {
+    left: 10px;               
+}
+
+.carousel-control.right {
+    right: 10px;              
 }
 
 /* Productos */
@@ -184,13 +298,36 @@ marquee {
     margin: 10px 0;
 }
 
+/* Quienes somos */
+
+.empresa {
+    margin-top: 30px;
+    text-align: center;
+    background-color: rgb(253, 253, 253);
+    margin: auto;
+    padding: 20px;
+}
+
+.empresa h2 {
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Raleway', sans-serif;
+    color: #7f97ac;
+}
+
+.empresa p {
+    font-size: 17px;
+    color: #777;
+    font-family: 'Raleway', sans-serif;
+}
 /* Footer */
 footer {
     background-color: #333;
     color: white;
     padding: 10px;
     text-align: center;
-    margin-top: 20px;
+    margin-top: 15px;
+    margin: auto;
 }
 
 /* Pantalla de login */
