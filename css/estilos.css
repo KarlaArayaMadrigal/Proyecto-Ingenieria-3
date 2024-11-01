@@ -9,85 +9,110 @@ body {
     overflow-x: hidden;                
 }
 
+/* Header */
 header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Asegura que los elementos estén distribuidos */
     background: linear-gradient(to right, rgb(59, 97, 178), rgb(12, 31, 79));
-    height: 90px;
-    text-align: center;
+    height: 100px;
     color: rgb(226, 239, 255);
+    padding: 0 20px;
 }
 
 header h1 {
     margin: 0;
     display: flex;
-    margin-left: 125px;
     font-family: 'Share Tech Mono', monospace;
-    margin-top: -60px;
     font-size: 30px;
+    margin-left: 120px;
+    flex: 1; 
+    margin-top: -60px;
 }
 
-header img {
-    display: flex;
-    width: 90px;
-    height: 90px;
-    padding: 5px;
-}
-.logo-icon{
-    display: flex;
+.logo-icon {
     width: 90px;
     height: 90px;
     border-radius: 100%;
-    margin-left: 20px;
-    padding: 5px;    
-}
-.carrito-icon{
-    width: 30px;                
-    height: 30px;               
-    border-radius: 50%;         
-    object-fit: cover;         
-    margin-left: 1195px;         
-    cursor: pointer;            
-    transition: background-color 0.3s; 
-    margin-top: -52px;
-    
-}
-.perfil-icon{
-    width: 30px;                
-    height: 30px;               
-    border-radius: 50%;         
-    object-fit: cover; 
-    margin-left: 1225px;        
-    cursor: pointer;            
-    transition: background-color 0.3s;
-    margin-top: -30px;
-}
-
-.carrito-icon:hover, .perfil-icon:hover {
-    background-color: rgb(131, 156, 202); 
-}
-nav {
-    display: flex;
-    justify-content: center;  
-    align-items: center;      
-    width: 100%;
-    margin-left: 338px;
     margin-top: 5px;
 }
 
+.navbar-search {
+    display: flex; /* Cambiar a flex en lugar de flexbox */
+    align-items: center;
+    margin-left: 820px; /* Ajuste para que esté alineado correctamente */
+    margin-top: -80px; /* Asegúrate de que no haya margen superior */
+    background-color: transparent; /* Sin fondo */
+    box-shadow: none;
+
+}
+
+.search-input {
+    padding: 5px;
+    width: 300px; /* Ajustar el ancho según sea necesario */
+    border: none; /* Sin borde */
+    border-radius: 5px 0 0 5px; /* Bordes redondeados */
+    outline: none; /* Sin contorno */
+    background-color: white; /* Color de fondo */
+    color: #000; /* Cambiar a color de texto visible */
+}
+
+.search-icon {
+    width: 40px;/* Ajustar el padding para hacerlo más pequeño */
+    border: none; /* Sin borde */
+    background-color: rgb(131, 156, 202);
+    color: #fff;
+    border-radius: 5px 5px 5px 5px; /* Bordes redondeados */
+    cursor: pointer;
+    margin-left: 5px; /* Espacio entre el input y el botón */
+}
+.options-container {
+    display: flex;
+    justify-content: center; /* Centra los elementos horizontalmente */
+    margin-top: -130px;
+ /* Opcional: define el ancho del contenedor */
+    margin-left: 1100px;
+}
+
+.carrito-icon, .perfil-icon {
+    width: 30px;                
+    height: 30px;               
+    border-radius: 50%;         
+    object-fit: cover;
+    cursor: pointer;            
+    transition: background-color 0.3s;
+    margin: 0 5px; /* Color de fondo inicial */
+}
+
+.carrito-icon:hover, .perfil-icon:hover {
+    background-color: rgb(131, 156, 202); /* Cambia el color de fondo al pasar el mouse */
+}
+
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    width: 100%;
+    background-color: #033b7c;
+    border-radius: 0 0px 0px 5px;
+}
+
 nav a {
-    padding: 8px 16px; 
+    padding: 8px 16px;
     text-decoration: none;
     color: rgb(73, 117, 199);
-    font-size: 12px;
+    font-size: 14px;
     font-weight: bold;
-    font-family: 'Lucida Sans Regular', sans-serif;
-    background-color: #e0e0e0; 
-    border-radius: 20px; 
-    transition: background-color 0.3s, color 0.3s; 
+    background-color: #e0e0e0;
+    border-radius: 20px;
+    transition: background-color 0.3s, color 0.3s;
+    margin: 0 5px;
 }
 
 nav a:hover {
-    background-color: rgb(131, 156, 202); 
-    color: #ffffff; 
+    background-color: rgb(131, 156, 202);
+    color: #ffffff;
 }
 /*Banner*/
 .Saludo {
@@ -165,7 +190,8 @@ nav a:hover {
 }
 
 .carousel-control.left {
-    left: 10px;               
+    left: 10px;
+    background-color: red;               
 }
 
 .carousel-control.right {

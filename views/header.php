@@ -21,31 +21,29 @@
 </head>
 <body>
 <header>
-    <img
-        src="./images/logo.png"
-        class="img-fluid logo-icon"
-        alt="logo"
-    />
-    
-    <h1>TechServer Solutions</h1>
-    <img 
-        src="./images/carrito.png"
-        class="img-fluid carrito-icon"
-        alt="carrito"
-        onclick="location.href='carrito.php'"  
-    />
-    <img 
-        src="./images/perfil.png"
-        class="img-fluid perfil-icon"
-        alt="perfil"
-        onclick="location.href='logout.php'" 
-    />
-    <nav>
-        <a href="index.php">Inicio</a>
-        <a href="quienes_somos.php">Quiénes Somos</a>
-        <a href="productos.php">Productos</a>
-        <a href="contacto.php">Contáctenos</a>
-        
-    </nav>
+    <img src="./images/logo.png" class="logo-icon" alt="logo">
+    <h1>TechHome</h1>
+    <form method="GET" class="navbar-search" id="search-form">
+        <input type="text" name="query" placeholder="¿Qué buscas?" class="search-input">
+        <img
+            src="./images/lupa.png"
+            class="img-fluid search-icon"
+            alt="lupa"
+            style="cursor: pointer;"
+            onclick="document.getElementById('search-form').submit();"
+        />
+    </form>
+    <div class="options-container">
+    <img src="./images/carrito.png" class="carrito-icon" alt="carrito" onclick="location.href='carrito.php'">
+    <img src="./images/perfil.png" class="perfil-icon" alt="perfil" onclick="location.href='logout.php'">
+    </div>
+</header>
+<!-- Barra de navegación -->
+<nav>
+    <a href="index.php">Inicio</a>
+    <a href="quienes_somos.php">Quiénes Somos</a>
+    <a href="productos.php">Productos</a>
+    <a href="contacto.php">Contáctenos</a>
+</nav>
 </header>
 <main>
