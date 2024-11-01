@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>TechServer Solutions</title>
+    <title>TechHome</title>
     <link rel="stylesheet" href="css/estilos.css">
     
     <!-- Bootstrap CSS -->
@@ -41,8 +41,8 @@
 <!-- Barra de navegación -->
 <nav>
     <a href="index.php">Inicio</a>
-    <a href="quienes_somos.php">Quiénes Somos</a>
     <a href="productos.php">Productos</a>
+    <a href="quienes_somos.php">Quiénes Somos</a>
     <a href="contacto.php">Contáctenos</a>
 </nav>
 </header>
