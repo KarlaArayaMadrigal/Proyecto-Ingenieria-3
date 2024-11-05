@@ -1,6 +1,6 @@
 body {
-    font-family: 'Raleway', sans-serif;  
-    background-color: #f5f5f5;          
+    font-family: 'Raleway', sans-serif !important;  
+    background-color: rgba(237, 246, 255, 0.765) !important; 
     color: #333;                        
     margin: 0;                         
     padding: 0;                       
@@ -9,25 +9,42 @@ body {
     overflow-x: hidden;                
 }
 
-/* Header */
 header {
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Asegura que los elementos estén distribuidos */
+    justify-content: space-between;
     background: linear-gradient(to right, rgb(59, 97, 178), rgb(12, 31, 79));
     height: 100px;
     color: rgb(226, 239, 255);
     padding: 0 20px;
 }
+.header-container a {
+    text-decoration: none; 
+    color: inherit; 
+}
 
-header h1 {
+.header-container h1 {
     margin: 0;
     display: flex;
     font-family: 'Share Tech Mono', monospace;
     font-size: 30px;
+    font: bold;
     margin-left: 120px;
     flex: 1; 
     margin-top: -60px;
+    color: white; 
+}
+
+/* Estilo para el efecto hover en el encabezado */
+.header-container a:hover h1 {
+    color: #d5e9fff9; 
+    transition: color 0.3s; 
+    text-decoration: none;
+}
+.header-container a:hover,
+.header-container a:focus,
+.header-container a:active {
+    text-decoration: none; 
 }
 
 .logo-icon {
@@ -37,41 +54,31 @@ header h1 {
     margin-top: 5px;
 }
 
-.navbar-search {
-    display: flex; /* Cambiar a flex en lugar de flexbox */
-    align-items: center;
-    margin-left: 820px; /* Ajuste para que esté alineado correctamente */
-    margin-top: -80px; /* Asegúrate de que no haya margen superior */
-    background-color: transparent; /* Sin fondo */
-    box-shadow: none;
-
-}
-
 .search-input {
+    display: flex;;
     padding: 5px;
-    width: 300px; /* Ajustar el ancho según sea necesario */
-    border: none; /* Sin borde */
-    border-radius: 5px 0 0 5px; /* Bordes redondeados */
+    width: 20px; 
+    border: none; 
+    border-radius: 5px 0 0 5px; 
     outline: none; /* Sin contorno */
-    background-color: white; /* Color de fondo */
-    color: #000; /* Cambiar a color de texto visible */
+    background-color: rgb(255, 255, 255) !important; 
+    color: #000;  
 }
 
 .search-icon {
-    width: 40px;/* Ajustar el padding para hacerlo más pequeño */
-    border: none; /* Sin borde */
+    width: 40px;
+    border: none; 
     background-color: rgb(131, 156, 202);
     color: #fff;
-    border-radius: 5px 5px 5px 5px; /* Bordes redondeados */
+    border-radius: 5px 5px 5px 5px; 
     cursor: pointer;
-    margin-left: 5px; /* Espacio entre el input y el botón */
+    margin-left: 5px; 
 }
 .options-container {
     display: flex;
-    justify-content: center; /* Centra los elementos horizontalmente */
-    margin-top: -130px;
- /* Opcional: define el ancho del contenedor */
-    margin-left: 1100px;
+    justify-content: center; 
+    margin-top: -52px;
+    margin-left: 1155px;
 }
 
 .carrito-icon, .perfil-icon {
@@ -81,59 +88,77 @@ header h1 {
     object-fit: cover;
     cursor: pointer;            
     transition: background-color 0.3s;
-    margin: 0 5px; /* Color de fondo inicial */
+    margin: 0 5px; 
+    margin-top: -75px;
 }
 
 .carrito-icon:hover, .perfil-icon:hover {
-    background-color: rgb(131, 156, 202); /* Cambia el color de fondo al pasar el mouse */
+    background-color: rgb(131, 156, 202); 
 }
-
 /* Navbar */
 nav {
-    display: flex;
-    justify-content: flex-end; /* Alinea los enlaces a la derecha */
-    padding: 10px;
-    width: 100%;
-    background-color: #033b7c;
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 10px 10px; 
+    margin-left: 830px;
+    margin-top: -35px;
 }
 
 nav a {
-    padding: 8px 16px;
-    text-decoration: none;
-    color: rgb(73, 117, 199);
-    font-size: 14px;
-    font-weight: bold;
-    background-color: #e0e0e0;
-    border-radius: 20px;
-    transition: background-color 0.3s, color 0.3s;
-    margin: 0 5px;
+    padding: 10px 20px; 
+    text-decoration: none; 
+    color: #2e3158 !important; 
+    font-size: 14px; 
+    font-weight: bold; 
+    border-radius: 55px; 
+    transition: background-color 0.3s, transform 0.2s; 
+    background-color: rgb(229, 233, 252);
 }
 
 nav a:hover {
-    background-color: rgb(131, 156, 202);
-    color: #ffffff;
+    background-color: rgb(131, 156, 202) !important; 
+    transform: scale(1.05); 
+    color: rgb(175, 203, 241);
 }
+
+.navbar-search {
+    display: flex; 
+    align-items: center;
+    margin-left: 555px; 
+    margin-top: -105px; 
+    background-color: transparent; 
+    box-shadow: none;
+    width: 50%;
+
+}
+
+
 /*Banner*/
-.banner-promo{
-    width: 100%;
-    display: flex;
-    height: 50%;
+.banner-promo {
+    width: 100%; 
+    height: 135px; 
+    object-fit: cover; 
+    display: block; 
 }
+
 .carousel {
     display: flex;
-    width: 300px; /* Ajusta el ancho aquí para hacer el carrusel menos ancho */
+    width: 100px;
     max-height: 900px;
     overflow: hidden;
     position: relative;
     margin: 20px auto;
     border-radius: 10px;
-    box-shadow: 0 4px 20px rgba(17, 12, 87, 0.272);
-    background-color: #ffffff;
+    box-shadow: 0 4px 10px rgba(103, 184, 247, 0.705);
+    background-color: #b7cfffc5;
+    color: white;
     transition: box-shadow 0.3s ease;
+    margin-top: 15px;
 }
 
 .carousel:hover {
-    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.2); 
+    box-shadow: 0 6px 30px rgba(30, 2, 237, 0.55); 
 }
 .carousel h2{
     font-size: 20px;
@@ -141,6 +166,7 @@ nav a:hover {
     margin-bottom: 20px;
     margin-left: 30px;
     margin-top: 15px;
+    font: bold;
 }
 
 .carousel-item {
@@ -195,7 +221,6 @@ nav a:hover {
     right: 10px;              
 }
 
-/* Productos */
 /* Productos */
 .productos {
     display: flex;
@@ -353,6 +378,76 @@ marquee {
     margin-top: 20px;
     margin-bottom: -20px;
 }
+/* Productos Section */
+.productos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+/* Individual Producto Card */
+.producto {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: center;
+    width: 300px;
+    transition: box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.producto img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px 8px 0 0;
+    object-fit: cover;
+}
+
+.producto h3 {
+    font-size: 1.5em;
+    color: #033b7c;
+    margin: 10px 0;
+}
+
+.producto p {
+    font-size: 1em;
+    color: #666;
+    margin: 10px 0;
+}
+
+.producto p:last-child {
+    font-weight: bold;
+    color: #333;
+}
+
+/* Botón Agregar al Carrito */
+.producto button {
+    display: flex;
+    background-color: #81adf8;
+    color: #ffffff;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 15px; 
+    width: 100%; 
+}
+
+.producto button:hover {
+    background-color: #818df9;
+}
+
 /* Footer */
 footer {
     background-color: #333;
@@ -360,7 +455,72 @@ footer {
     padding: 10px;
     text-align: center;
 }
+/* Sección del formulario */
+.formulario-contacto {
+    width: 100%;
+}
 
+/* Mensaje de confirmación */
+.mensaje-confirmacion {
+    background-color: #e1f7e7;
+    color: #3c763d;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #d6e9c6;
+    border-radius: 5px;
+}
+
+/* Estilos de etiquetas y campos de formulario */
+label {
+    display: block;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    font-size: 1em;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    border-color: #4a4a8a;
+    outline: none;
+}
+
+/* Área de texto */
+textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+/* Botón de enviar */
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #4a4a8a;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #3a3a70;
+}
 /* Pantalla de login */
 form {
     width: 300px;
