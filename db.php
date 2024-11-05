@@ -2,8 +2,8 @@
 // db.php
 $host = 'localhost';
 $dbname = 'tienda_electrodomesticos';
-$user = 'admin';
-$password = 'Pr0y3ct0';
+$user = 'root';
+$password = 'admin';
 
 $conn = mysqli_connect($host, $user, $password, $dbname);
 
