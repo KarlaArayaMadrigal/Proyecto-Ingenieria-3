@@ -151,7 +151,7 @@ nav a:hover {
     margin: 20px auto;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(103, 184, 247, 0.705);
-    background-color: #b7cfffc5;
+    background-color: #81adf8;
     color: white;
     transition: box-shadow 0.3s ease;
     margin-top: 15px;
@@ -457,7 +457,25 @@ footer {
 }
 /* Sección del formulario */
 .formulario-contacto {
-    width: 100%;
+    margin-top: 30px;
+    text-align: center;
+    background-color: rgb(253, 253, 253);
+    margin: auto;
+    padding: 10px;
+}
+.formulario-contacto h2{
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Raleway', sans-serif;
+    color: #7f97ac;
+    margin-bottom: 15px;
+    padding: 20px;
+}
+.formulario-contacto p{
+    font-size: 17px;
+    color: #777;
+    font-family: 'Raleway', sans-serif;
+    margin-top: 15px;
 }
 
 /* Mensaje de confirmación */
@@ -489,6 +507,8 @@ textarea {
     background-color: #f9f9f9;
     font-size: 1em;
     transition: border-color 0.3s ease;
+    font-size: 15px;
+    font-family: 'Raleway', sans-serif;
 }
 
 input[type="text"]:focus,
@@ -501,7 +521,9 @@ textarea:focus {
 /* Área de texto */
 textarea {
     height: 100px;
-    resize: vertical;
+    resize: auto !important;
+    font-size: 10px;
+    font-family: 'Raleway', sans-serif;
 }
 
 /* Botón de enviar */
@@ -540,7 +562,7 @@ form input[type="text"], form input[type="password"] {
 
 form button {
     width: 100%;
-    background-color: #4CAF50;
+    background-color: #81adf8;
     color: white;
     border: none;
     padding: 10px;
@@ -549,7 +571,7 @@ form button {
 }
 
 form button:hover {
-    background-color: #45a049;
+    background-color: #6a8fcf;
 }
 
 /* Estilos Responsivos */

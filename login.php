@@ -34,7 +34,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </head>
 <body>
     <h2>Iniciar Sesión</h2>
-    <form method="POST">
+    <form method="POST"
+    class="formularioLogin">
         <input type="text" name="username" placeholder="Usuario" required>
         <input type="password" name="password" placeholder="Contraseña" required>
         <button type="submit">Entrar</button>

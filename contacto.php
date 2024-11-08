@@ -5,7 +5,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Resto del código para manejar el formulario
 }
 ?>
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -17,9 +16,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <main>
     <!-- Contenido de contacto -->
     <section class="formulario-contacto">
+        <h2>Contacto</h2>
+       <p>Si tienes alguna pregunta o necesitas información, no dudes en contactar con nosotros.</p>
         <?php if (isset($mensaje_confirmacion)) echo "<p class='mensaje-confirmacion'>$mensaje_confirmacion</p>"; ?>
         
-        <form method="POST">
+        <form method="POST" class="contactoForm">
             <label for="nombre">Nombre:</label>
             <input type="text" id="nombre" name="nombre" required><br>
 
@@ -33,6 +34,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </form>
     </section>
 </main>
-
+<?php include('views/footer.php'); ?>
 </body>
 </html>
