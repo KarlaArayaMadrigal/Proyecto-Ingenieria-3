@@ -379,25 +379,38 @@ marquee {
     margin-bottom: -20px;
 }
 /* Productos Section */
+/* Estilo general para el contenedor de productos */
 .productos {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* Cambia a nowrap si no quieres que los productos se ajusten a la siguiente línea */
     gap: 20px;
     justify-content: center;
     padding: 20px;
     margin: 0 auto;
     max-width: 1200px;
+    box-sizing: border-box;
 }
 
-/* Individual Producto Card */
+/* Estilo para el título */
+.productos h2 {
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Raleway', sans-serif;
+    color: #7f97ac;
+    margin-bottom: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+/* Estilo para cada tarjeta individual de producto */
 .producto {
     background-color: #ffffff;
     border: 1px solid #e0e0e0;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 15px;
+    padding: 20px;
     text-align: center;
-    width: 300px;
+    width: 280px; /* Ajusta el ancho de cada tarjeta */
     transition: box-shadow 0.3s ease;
     display: flex;
     flex-direction: column;
@@ -405,6 +418,7 @@ marquee {
     justify-content: space-between;
 }
 
+/* Estilo para la imagen del producto */
 .producto img {
     max-width: 100%;
     height: auto;
@@ -412,21 +426,29 @@ marquee {
     object-fit: cover;
 }
 
+/* Título del producto */
 .producto h3 {
     font-size: 1.5em;
     color: #033b7c;
-    margin: 10px 0;
+    margin: 15px 0;
 }
 
+/* Descripción del producto */
 .producto p {
     font-size: 1em;
     color: #666;
     margin: 10px 0;
 }
 
+/* Precio del producto */
 .producto p:last-child {
     font-weight: bold;
     color: #333;
+}
+
+/* Efecto hover para cada tarjeta de producto */
+.producto:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 /* Botón Agregar al Carrito */
@@ -448,13 +470,6 @@ marquee {
     background-color: #818df9;
 }
 
-/* Footer */
-footer {
-    background-color: #333;
-    color: white;
-    padding: 10px;
-    text-align: center;
-}
 /* Sección del formulario */
 .formulario-contacto {
     margin-top: 30px;
@@ -475,7 +490,12 @@ footer {
     font-size: 17px;
     color: #777;
     font-family: 'Raleway', sans-serif;
-    margin-top: 15px;
+    margin-top: -20px;
+}
+.contactoForm{
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
 /* Mensaje de confirmación */
@@ -521,7 +541,7 @@ textarea:focus {
 /* Área de texto */
 textarea {
     height: 100px;
-    resize: auto !important;
+    resize: none !important;
     font-size: 10px;
     font-family: 'Raleway', sans-serif;
 }
@@ -544,12 +564,40 @@ button:hover {
     background-color: #3a3a70;
 }
 /* Pantalla de login */
+.container-login{
+    margin-top: 30px;
+    text-align: center;
+    background-color: rgb(253, 253, 253);
+    margin: auto;
+    padding: 20px;
+}
+.titulo-login {
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Raleway', sans-serif;
+    color: #7f97ac;
+    margin-bottom: 15px;
+    padding: 20px;
+}
+.container-login p {
+    font-size: 17px;
+    color: #777;
+    font-family: 'Raleway', sans-serif;
+    margin-top: -15px;
+}
 form {
-    width: 300px;
     margin: 50px auto;
     padding: 30px;
     background-color: white;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    
+}
+.titulo-login {
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Raleway', sans-serif;
+    color: #7f97ac !important;
+    margin-bottom: 15px;
+    padding: 20px;
 }
 
 form input[type="text"], form input[type="password"] {
@@ -584,4 +632,12 @@ form button:hover {
     .carousel {
         height: 200px;
     }
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
 }

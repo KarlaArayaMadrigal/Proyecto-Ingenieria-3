@@ -25,21 +25,28 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $error = "Usuario o contraseña incorrectos.";
     }
 }
+include('views/header.php');
 ?>
 
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Login</title>
 </head>
+
 <body>
-    <h2>Iniciar Sesión</h2>
+    <div class="container-Login">
+    <h2 class="titulo-login">Iniciar Sesión</h2>
+    <p>Por favor completa tus datos para iniciar sesión.</p>
     <form method="POST"
-    class="formularioLogin">
+        class="formularioLogin">
         <input type="text" name="username" placeholder="Usuario" required>
         <input type="password" name="password" placeholder="Contraseña" required>
         <button type="submit">Entrar</button>
     </form>
     <?php if (isset($error)) echo "<p>$error</p>"; ?>
+    </div>
 </body>
+<?php include('views/footer.php'); ?>
 </html>
