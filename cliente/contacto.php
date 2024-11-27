@@ -11,7 +11,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </head>
 <body>
 
-<?php include('views/header.php'); ?>
+<?php include('../cliente/views/header.php'); ?>
 
 <main>
     <!-- Contenido de contacto -->
@@ -34,6 +34,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </form>
     </section>
 </main>
-<?php include('views/footer.php'); ?>
+<?php include('../cliente/views/footer.php'); ?>
 </body>
 </html>

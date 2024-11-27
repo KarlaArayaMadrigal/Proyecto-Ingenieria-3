@@ -1,0 +1,3 @@
+RewriteEngine On
+RewriteBase /Proyecto%20Ingenieria%203/Proyecto-Ingenieria-3/
+RewriteRule ^quienes-somos$ cliente/views/quienes_somos.php [L]
