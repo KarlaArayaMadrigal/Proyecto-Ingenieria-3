@@ -19,7 +19,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $user = mysqli_fetch_assoc($result);
         $_SESSION['user_id'] = $user['id'];
         $_SESSION['rol'] = $user['rol'];
-        header("Location: index.php");
+        header("Location: /Proyecto Ingenieria 3/Proyecto-Ingenieria-3/backend/index.php");
+
         exit();
     } else {
         $error = "Usuario o contraseña incorrectos.";
