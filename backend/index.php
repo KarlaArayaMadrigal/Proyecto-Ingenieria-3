@@ -6,7 +6,7 @@ include('../cliente/views/header.php');
 include('../cliente/views/banner.php');
 ?>
 
-<!-- Aquí puedes agregar contenido adicional si es necesario -->
+
 
 <!-- Scripts necesarios para el funcionamiento de Bootstrap -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
