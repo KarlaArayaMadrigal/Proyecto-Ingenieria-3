@@ -1,4 +1,4 @@
-<?php include('views/header.php'); ?>
+<?php include('../cliente/views/header.php'); ?>
 <div class = "empresa" >
 <h2>Quiénes Somos</h2>
 <p>En TechHome, ofrecemos una amplia gama de electrodomésticos de alta calidad para hogares modernos.</p>
@@ -9,4 +9,4 @@
 <p>En TechHome, somos tu socio de confianza en la búsqueda de calidad, tecnología e innovación para tu hogar.</p>
 <img src="./images/equipo.png" alt="equipo" class= "equipo-icon">
 </div>
-<?php include('views/footer.php'); ?>
+<?php include('../cliente/views/footer.php'); ?>
