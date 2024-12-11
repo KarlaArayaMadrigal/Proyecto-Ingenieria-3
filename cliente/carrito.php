@@ -1,13 +1,13 @@
 <?php
 session_start();
 include('../cliente/views/header.php');
-include('db.php'); // Incluye la conexión a la base de datos
+include('db.php'); 
 
-// Eliminar un producto del carrito si se recibe el parámetro 'eliminar'
+
 if (isset($_GET['eliminar'])) {
-    $idEliminar = $_GET['eliminar'];
+    $idEliminar = intval($_GET['eliminar']); 
     unset($_SESSION['carrito'][$idEliminar]);
-    header("Location: ../cliente/carrito.php"); // Redirige para evitar el reenvío del formulario
+    header("Location: ../cliente/carrito.php"); 
     exit();
 }
 
@@ -22,7 +22,8 @@ if (isset($_GET['eliminar'])) {
         echo "<h2>Tu Carrito</h2>";
 
         foreach ($_SESSION['carrito'] as $id => $cantidad) {
-            // Obtener información del producto
+            $id = intval($id);
+
             $query = "SELECT * FROM productos WHERE id = $id";
             $result = mysqli_query($conn, $query);
 
@@ -40,9 +41,7 @@ if (isset($_GET['eliminar'])) {
                 echo "</div>";
                 echo "<a href='carrito.php?eliminar=$id' onclick='return confirm(\"¿Estás seguro de que quieres eliminar este producto?\");'>Eliminar</a>";
                 echo "</div>";
-            } else {
-                echo "<p>Producto con ID $id no encontrado.</p>";
-            }
+            } 
         }
 
         echo "<div class='carrito-total'>";
@@ -53,4 +52,3 @@ if (isset($_GET['eliminar'])) {
 </div>
 
 <?php include('../cliente/views/footer.php'); ?>
-

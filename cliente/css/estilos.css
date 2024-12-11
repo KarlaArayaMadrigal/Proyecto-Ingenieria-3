@@ -8,7 +8,7 @@ body {
     overflow-x: hidden;
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Asegura que el body tenga al menos la altura de la ventana */
+    min-height: 100vh;
 }
 
 
@@ -273,7 +273,7 @@ nav a:hover {
 }
 
 .producto button {
-    background-color: #4CAF50;
+    background-color: #313c92;
     color: white;
     border: none;
     padding: 10px 15px;
@@ -287,7 +287,7 @@ nav a:hover {
 }
 
 .producto button:hover {
-    background-color: #45a049;
+    background-color: #5261ae;
 }
 
 
@@ -377,25 +377,26 @@ marquee {
     margin-top: 15px;
 }
 .equipo-icon {
-    width: 100%; /* Esto asegura que el icono ocupe todo el ancho disponible */
-    height: auto; /* Mantiene la proporción de la imagen, ajustando la altura automáticamente */
+    width: 100%;
+    height: auto; 
     margin-right: 10px;
     margin-top: 20px;
     margin-bottom: -20px;
-    object-fit: contain; /* Esto asegura que la imagen se ajuste sin distorsionarse */
+    object-fit: contain; 
 }
 
 /* Productos Section */
 /* Estilo general para el contenedor de productos */
 .productos {
     display: flex;
-    flex-wrap: wrap; /* Cambia a nowrap si no quieres que los productos se ajusten a la siguiente línea */
+    flex-wrap: wrap; 
     gap: 20px;
     justify-content: center;
     padding: 20px;
     margin: 0 auto;
     max-width: 1200px;
     box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
 }
 
 /* Estilo para el título */
@@ -417,8 +418,9 @@ marquee {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
     text-align: center;
-    width: 280px; /* Ajusta el ancho de cada tarjeta */
+    width: 280px; 
     transition: box-shadow 0.3s ease;
+    font-family: 'Raleway', sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -436,6 +438,7 @@ marquee {
 /* Título del producto */
 .producto h3 {
     font-size: 1.5em;
+    font-family: 'Raleway', sans-serif;
     color: #033b7c;
     margin: 15px 0;
 }
@@ -443,6 +446,7 @@ marquee {
 /* Descripción del producto */
 .producto p {
     font-size: 1em;
+    font-family: 'Raleway', sans-serif;
     color: #666;
     margin: 10px 0;
 }
@@ -450,6 +454,7 @@ marquee {
 /* Precio del producto */
 .producto p:last-child {
     font-weight: bold;
+    font-family: 'Raleway', sans-serif;
     color: #333;
 }
 
@@ -457,24 +462,48 @@ marquee {
 .producto:hover {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
-
 /* Botón Agregar al Carrito */
-.producto button {
+/* Estilo general para el formulario */
+.AgregaCarrito {
     display: flex;
-    background-color: #81adf8;
-    color: #ffffff;
-    font-weight: bold;
-    border: none;
-    border-radius: 4px;
-    padding: 10px 20px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    margin-top: 15px; 
-    width: 100%; 
+    justify-content: center;
+    font-family: 'Raleway', sans-serif;
+    align-items: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    box-shadow: none;
 }
 
-.producto button:hover {
-    background-color: #818df9;
+/* Estilo del botón de agregar al carrito */
+.btn-agregar {
+    background-color: #080e84; 
+    font-family: 'Raleway', sans-serif;
+    color: white; 
+    font-size: 16px; 
+    font-weight: bold;
+    padding: 10px 20px; 
+    border: none;
+    border-radius: 5px; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease, transform 0.2s ease; 
+}
+
+/* Efecto al pasar el mouse sobre el botón */
+.btn-agregar:hover {
+    background-color: #190e5e;
+    transform: translateY(-2px); 
+}
+
+/* Efecto al hacer clic en el botón */
+.btn-agregar:active {
+    background-color: #060c5e; 
+    transform: translateY(0); 
+}
+
+/* Estilo de enfoque (cuando el botón tiene el foco) */
+.btn-agregar:focus {
+    outline: none; 
+    box-shadow: 0 0 5px rgba(40, 167, 69, 0.5)
 }
 
 /* Sección del formulario */
@@ -576,10 +605,10 @@ button:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Altura completa de la ventana */
+    height: 100vh; 
     background-color: rgb(244, 244, 244);
     padding: 20px;
-    margin: 0; /* Elimina márgenes predeterminados */
+    margin: 0; 
 }
 
 .titulo-login {
@@ -603,7 +632,7 @@ button:hover {
 /* Formulario */
 form {
     width: 100%;
-    max-width: 400px; /* Limita el ancho del formulario */
+    max-width: 400px; 
     padding: 30px;
     background-color: white;
     border-radius: 8px;
@@ -657,6 +686,7 @@ form button:hover {
 .carrito-container {
     margin: 30px auto;
     max-width: 1200px;
+    font-family: 'Raleway', sans-serif;
     padding: 20px;
     background-color: #f8f8f8;
     border-radius: 8px;
@@ -665,9 +695,9 @@ form button:hover {
 
 /* Título del carrito */
 .carrito-container h2 {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Raleway', sans-serif !important;
     font-size: 28px;
-    color: #333;
+    color: #0d427d;
     text-align: center;
     margin-bottom: 20px;
 }
@@ -676,6 +706,7 @@ form button:hover {
 .producto-carrito {
     background-color: white;
     padding: 15px;
+    width: 500;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;

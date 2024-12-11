@@ -3,11 +3,9 @@ session_start();
 include('db.php');
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Variables
     $username = mysqli_real_escape_string($conn, $_POST['username']);
     $password = mysqli_real_escape_string($conn, $_POST['password']);
 
-    // Consulta corregida
     $query = "SELECT * FROM usuarios WHERE nombre_usuario = '$username' AND contraseña = '$password'";
     $result = mysqli_query($conn, $query);
 

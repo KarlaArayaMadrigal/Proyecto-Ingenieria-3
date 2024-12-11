@@ -1,8 +1,6 @@
 <?php
-// Procesamiento del formulario al enviar
 include 'db.php';
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Resto del código para manejar el formulario
 }
 ?>
 <!DOCTYPE html>
@@ -14,7 +12,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <?php include('../cliente/views/header.php'); ?>
 
 <main>
-    <!-- Contenido de contacto -->
     <section class="formulario-contacto">
         <h2>Contacto</h2>
        <p>Si tienes alguna pregunta o necesitas información, no dudes en contactar con nosotros.</p>

@@ -1,4 +1,5 @@
 <?php
+// db.php
 $host = 'localhost';
 $dbname = 'tienda_electrodomesticos';
 $user = 'root';
