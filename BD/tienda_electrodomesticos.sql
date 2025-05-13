@@ -64,12 +64,7 @@ CREATE TABLE `contacto` (
 -- Volcado de datos para la tabla `contacto`
 --
 
-INSERT INTO `contacto` (`id`, `nombre`, `email`, `mensaje`, `fecha`) VALUES
-(1, 'JafetR', 'jafetramirezg@gmail.com', '2', '2024-11-03 17:56:51'),
-(2, 'Jafet Ramirezl', 'genpra@gmail.com', 'g', '2024-11-07 01:18:31'),
-(3, 'Jafet Ramirez ', 'jramirez@savalcorp.com', '+', '2024-11-10 17:06:54');
 
--- --------------------------------------------------------
 
 --
 -- Estructura de tabla para la tabla `ordenes`
